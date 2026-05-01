@@ -1,10 +1,7 @@
 import { cn } from "@/lib/utils";
-import { useState } from "react";
 
 // gradient-backgrounds.tsx — base variant (indigo)
 export const Component = () => {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="min-h-screen w-full relative">
       <div
@@ -20,8 +17,6 @@ export const Component = () => {
 
 // demo.tsx — pink variant
 export default function GradientDemo() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="min-h-screen w-full bg-white relative">
       <div

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Star, Home, Heart, Award, Users } from "lucide-react";
+import { Shield, Star, Home, Heart, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const S = { fontFamily: "var(--font-body)" } as const;
