@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* shadcn/ui CSS variable tokens */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 349 86% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 14% 96%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 30 14% 96%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 30 14% 94%;
+    --accent-foreground: 0 0% 7%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 10% 88%;
+    --input: 30 10% 88%;
+    --ring: 349 86% 42%;
+    --radius: 0.6rem;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+  }
+}
+
+/* ── DR Horton premium design tokens ──────────────────────────────────── */
+:root {
+  /* Brand */
+  --red:         #c8102e;
+  --red-dark:    #a50d27;
+  --red-deeper:  #7d0820;
+
+  /* Header */
+  --header-bg:   #111111;
+  --subnav-bg:   #0d0d0d;
+
+  /* Backgrounds */
+  --warm-bg:     #F8F6F2;
+  --cream:       #EDE6DA;
+  --white:       #ffffff;
+
+  /* Text */
+  --text:        #0F0F0F;
+  --text-muted:  #6B6860;
+  --text-light:  #9B9894;
+
+  /* Borders */
+  --border-warm: #DDD8CF;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Legacy aliases (keep for remaining inline styles) */
+  --gray-light:  #F5F4F0;
+  --gray-mid:    var(--border-warm);
+  --gray-border: #D4CFC7;
+  --gray-text:   var(--text-muted);
+  --font:        var(--font-body);
+
+  /* Layout */
+  --header-h:   8rem;
+  --subnav-h:   5.4rem;
+  --top-offset: calc(var(--header-h) + var(--subnav-h));
+  --map-w:      42%;
+}
+
+@media (max-width: 1100px) {
+  :root { --map-w: 36%; }
+}
+
+*, ::before, ::after { box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  line-height: 1.5;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  letter-spacing: 0.005em;
+  line-height: 1.6;
+  background: var(--warm-bg);
+  margin: 0;
+  padding: 0;
+}
+
+a { color: inherit; }
+img { display: block; }
+button, select, input { font-family: var(--font-body); }
+
+/* ── Utility: display / serif font ─────────────────────────────────────── */
+.font-display { font-family: var(--font-display) !important; }
+
+/* ── Smooth card hover lift ─────────────────────────────────────────────── */
+.card-lift {
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.card-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.11), 0 8px 20px rgba(0, 0, 0, 0.07);
+}
